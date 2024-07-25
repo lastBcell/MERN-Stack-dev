@@ -16,4 +16,5 @@ dl{
 }
 .divis{
     color: blueviolet;
+    border-collapse:separate;
 }
