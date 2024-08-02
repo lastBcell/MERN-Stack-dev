@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oninput Example</title>
+    <style>
+        input {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Dynamic Input Update</h2>
+    <form>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" oninput="updateGreeting()">
+        
+        <label for="lastName">Last Name:</label>
+        <input name="name" type="text" id="lastName" oninput="updateGreeting()">
+        <output id="greeting"> hello,world</output>
+        <!-- <p>Greeting: <span id="greeting">Hello, World!</span></p> -->
+    </form>
+
+    <script>
+        function updateGreeting() {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const greeting = `Hello, ${firstName} ${lastName}!`;
+            document.getElementById('greeting').textContent = greeting;
+        }
+    </script>
+</body>
+</html>

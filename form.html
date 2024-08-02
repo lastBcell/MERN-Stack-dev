@@ -1,43 +1,45 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Selectors</title>
+<style>
+    h1 {
+        color: #36CFFF;
+    }
+
+    .red {
+            color:red;
+        }
+        h1, h2, p {
+            text-align: center;
+            border: 2px dashed red;
+        }
+        
+        input[type = "text"] {
+            background-color:darkgreen;
+        }
+        a{
+            color:red;
+        }
+
+        * {
+            font-weight: bold;
+            }
+</style>
 </head>
 <body>
-    <fieldset>
-        <legend>border</legend>
-    <h1>form attribute
-        
-    </h1>
-    <label for="abc">form attribute</label>
-    <input type="" id="abc" >
-    <select name="" id="" >
-        <option value="">a</option>
-        <option value="">b</option>
-    </select>
-    <textarea name="" id="" rows="3 "cols="10"></textarea>
-    <label for="color">color picker</label>
-    <input type="color" value="#a52a22" id="color">
-    <input type="date"    value="2002-07-03" min="2023-07-15" max="2024-08-10">
-    <input type="file">
-    <ul>
-        <li>abx</li>
-    </ul>
-    <input type="radio" name="select">
-    <input type="radio" name="select"  checked>
-    <input type="radio" name="select" checked >
-    <input type="radio" name="select">
-    <input type="radio" name="select">
-    <input type="search" placeholder="search here" autofocus>
-    <input type="checkbox" name="check" checked>
-    <input type="checkbox" name="check">
-    <input type="checkbox" name="check" checked>
-    <input type="checkbox" name="check">
-    
-    <button onclick="alert('helloworld')">submit</button>
-</fieldset>
+    <h1>Element Selector:This selector the color apply only in tags.</h1>
+    <h2 class="red">Class Selectors: You can define the style on class attribute of the elements.</h2>
+    <p id="orange">ID Selectors:You can define style rules based on the id attribute of the elements.</p>
+    <p><input type="text" placeholder="name">Attribute Selectors
+    <input type="password"></p>
+    <a href="saahil.html" target="_blank">new page</a>
+    <input type="number" max="5" min="0" >
+    <input type="text" step="2" readonly value="1524">
+    <button type="submit">n x xmwm</button>
 
 </body>
 </html>
