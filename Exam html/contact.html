@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        form *{
+            display: block  ;
+            padding: 5px;
+            /* margin: 5px auto; */
+        }
+        /* label{
+            display: block;
+            margin: 5px auto;
+        } */
+         button{
+            margin-top: 10px;
+         }
+         a
+         {
+            color: black;
+         }
+    </style>
+</head>
+<body>
+    <a href="news-listing.html">Go back</a>
+ <form action="contact.html">
+    <h1>Contact us</h1>
+    <label for="name">Name</label>
+    <input type="text"id="name" name="">
+    <label for="num" >Number</label>
+    <input type="tel" maxlength="10" name="" id="num">
+    <label for="lst"></label>
+    <select name="" id="lst">
+        <option value="">sales</option>
+        <option value="">service</option>
+        <option value="">enquiry</option>
+        <option value="">advertisement</option>
+        <option value="">complaint</option>
+
+    </select>
+        <label for="des">Description</label>
+        <textarea name="" id="des" placeholder="Description"></textarea>
+        <button>submit</button>
+ </form>   
+</body>
+</html>

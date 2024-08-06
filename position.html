@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            background-color: rgb(0, 174, 255);
+            width: 50%;
+            height: 200vh;
+            padding: 10px;
+            position :relative;
+            /* top: ; */
+            margin:  auto;
+            
+        }
+        .one{
+            background-color: greenyellow;
+            height: 100px;
+            width: 300px;
+            /* position: fixed */
+            ;
+            top: 10px;
+            /* bottom: 10px;
+            left: 50px;
+            margin-left: 10px;
+           */
+        }
+        .two{
+            background-color: orange;
+            height: 100px;
+            width: 300px;
+            position: sticky;
+            top:20px;
+            margin-top: 50px;
+            /* right: 50px; */
+            /* margin-left:20px ; */
+              
+            
+            
+        }
+        .two-sec{
+            background-color: aqua;
+            height: 20px;
+            width: 20px;
+            text-align: center;
+            /* position: absolute;
+            top: 5px;
+            right: 5px; */
+        }
+        .three{
+         
+            background-color: pink;
+            height: 100px;
+            width: 300px;
+            /* position: sticky; */
+            top: 10px;
+            right: 10px;
+        }
+        .para{
+            background-color: aquamarine;
+            height: 20px;
+            width: 20px;
+            /* position: absolute;
+            right: 10px;
+            top: 10px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent"><p>parent</p>
+    <div class="one">one</div>
+    <div class="two">two
+        <div class="two-sec"><></div>
+    </div>
+    <div class="three">three
+        <div class="para">hai</div>
+    </div>
+    </div>
+</body>
+</html>
