@@ -11,16 +11,44 @@
         .abc{
             text-align: center;
             padding: 10px;
+            position: relative;
+            width: 100%;
+            background-color: silver;
+            height: 30px;
             
         }
         .abc a{
             text-decoration: none;
-            margin: 10px;
+            /* margi    n: 30px 10px ; */
             font-size: larger;
             /* color: black; */
         }
         a{
             color: black;
+            margin: 20px 10px;
+            
+        }
+        a:hover{
+            color: rgb(114, 112, 112);
+        }
+        b{
+            /* background-color: deepskyblue; */
+            padding: 10px;
+            /* border: 1px solid black; */
+            border-radius: 20px;
+            transition: 0.8s;
+            margin-top: 10px;
+        }
+        b:hover{
+            background-color: rgb(223, 228, 230);
+        }
+        .head{
+            /* text-align: center; */
+            margin: 0px;
+            position: absolute;
+            left: 0px;
+            top: 0;
+            padding: 5px;
         }
     </style>
 </head>
@@ -28,9 +56,11 @@
     
 </body>
 <div class="abc">
-   <b><a href="about.html" target="_blank">About Us</a></b> 
+    <h1 class="head">Mashup News</h1>
+   <b><a href="about.html" target="_blank" title="link for news">About Us</a></b> 
    <b><a href="contact.html" target="_blank">contact Us</a></b>
 </div>
+
 <a href="nl-1.html"><h1>
     Latest News, Live Updates Today August 6, 2024: Punjab CM assures exemplary punishment in sacrilege cases
 </h1></a>
