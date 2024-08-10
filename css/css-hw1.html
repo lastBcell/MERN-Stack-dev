@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS</title>
+<style>
+.example {
+  padding: 20px;
+  color: white;
+}
+
+div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+}
+h1:hover{
+    visibility: hidden;
+}
+h1:hover::after{
+visibility: visible;
+
+}
+h1::after{
+    visibility: hidden;
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: -45px;
+    border-bottom: 80px solid black;
+    border-right: 80px solid transparent;
+    border-left: 80px solid transparent;
+   
+}
+@media  (max-width: 750px) {
+  .mid3{
+    position: absolute;
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 50px;
+    top: -8px;
+    left: 0px;
+    }
+    .mid2,.mid1{display: none;}
+   
+    } 
+
+@media (min-width: 750px) {
+  .mid1,.mid3{display: none;}
+   .mid2{display: inline;}
+} 
+
+@media (min-width: 1000px) {
+  .mid2,.mid3 {display: none;}
+  .mid1{display: inline;}
+  
+}
+</style>
+</head>
+<body>
+<div>
+    <h1 class="mid1">L</h1>
+    <h1 class="mid2">7</h1>
+    <h1 class="mid3"></h1>
+</div>
+
+
+
+</body>
+</html>
