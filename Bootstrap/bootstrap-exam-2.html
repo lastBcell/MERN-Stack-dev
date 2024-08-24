@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Bootstrap Exam 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <style>
+    a.nav-link.nav-item.active {
+    border-radius: 0px;
+}
+#sidebar,#hello{
+    background-color: rgb(231, 230, 230);
+}
+.btn123{
+    background-color: rgb(231, 230, 230);
+
+
+}
+.btn123:hover{
+    background-color: rgb(200, 199, 199);
+
+
+}
+
+
+  </style>
+  <body class=""> 
+    <nav class="navbar navbar-expand-lg bg-dark   ">
+      <div class="container-fluid ">
+        <a class="navbar-brand text-secondary" href="#">Project Name</a>
+        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse  " id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+            <li class="nav-item px-3 ">
+              <a class=" nav-link active text-light" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item px-3 ">
+              <a class="nav-link text-secondary" href="#">About</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link text-secondary " href="#" >Output</a>
+            </li>
+          </ul>
+          <span>
+            <h6 class="text-secondary m-0">Logged & USer</h6>
+          </span>
+         
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="col-3 ">
+                <!-- sidebar contaienr -->
+            <div class=" my-4 " id="sidebar">
+                <nav class="nav flex-column nav-pills  ">
+                    <a class="nav-link disabled py-2" aria-current="page" href="#"><strong>SIDEBAR</strong></a>
+
+                    <a class="nav-link  nav-item  active py-1 " aria-current="page" href="#"><strong>Link</strong></a>
+                    <a class="nav-link py-1" href="#"><strong>Link</strong></a>
+                    <a class="nav-link py-1" href="#"><strong>Link</strong></a>
+                    <a class="nav-link py-1 " aria-disabled="true"><strong>Link</strong></a>
+
+                    <a class="nav-link disabled py-2" aria-current="page" href="#"><strong>SIDEBAR</strong></a>
+
+                    <a class="nav-link py-1 " aria-current="page" href="#"><strong>Link</strong></a>
+                    <a class="nav-link py-1" href="#"><strong>Link</strong></a>
+                    <a class="nav-link py-1" href="#"><strong>Link</strong></a>
+                    <a class="nav-link py-1 " aria-disabled="true"><strong>Link</strong></a>
+                    <a class="nav-link py-1" aria-disabled="true"><strong>Link</strong></a>   <a class="nav-link py-1 " aria-disabled="true"><strong>Link</strong></a>   
+
+                     <a class="nav-link disabled py-2" aria-current="page" href="#"><strong>SIDEBAR</strong></a>
+
+                    <a class="nav-link " aria-current="page" href="#"><strong>Link</strong></a>
+                    <a class="nav-link py-1" href="#"><strong>Link</strong></a>
+                    <a class="nav-link py-1" href="#"><strong>Link</strong></a>
+                   
+                   
+                  </nav>
+               
+            </div>
+        </div>
+            <div class= "col ">
+                <!-- hello world box -->
+                <div class=" m-4 p-5" id="hello">
+                    <p class="fs-1"><Strong>Hello, world!</Strong></p>
+                    <p class="fw-medium pe-3" >This is a template for simple marketing or information website.it include a large callout called the herp unit and three supporting pieces of content.Use it as a starting point to create something more unique </p>
+                    <button type="button" class="btn btn-primary px-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Learn more!
+                      </button>
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Learn more</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                This is a template for simple marketing or information website.it include a large callout called the herp unit and three supporting pieces of content.Use it as a starting point to create something more unique
+                    
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                </div>
+                <div class="conatainer m-4">
+                    <div class="row">
+                        <div class="col"><div class="card-body mb-3">
+                            <h5 class="card-title mb-2"><Strong>Heading</Strong></h5>
+                            <p class="card-text fw-medium lh-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga quibusdam, adipisci, dolores ducimus exercitationem nostrum atque blanditiis autem illo, veritatis minima aperiam. Deleniti qui distinctio expedita eos praesentium, recusandae fugit?</p>
+                            <a href="#" class="btn btn123 fw-medium border-dark">View details   -</a>
+                          </div></div>
+                        <div class="col"><div class="card-body mb-3">
+                            <h5 class="card-title mb-2"><Strong>Heading</Strong></h5>
+                            <p class="card-text fw-medium lh-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga quibusdam, adipisci, dolores ducimus exercitationem nostrum atque blanditiis autem illo, veritatis minima aperiam. Deleniti qui distinctio expedita eos praesentium, recusandae fugit?</p>
+                            <a href="#" class="btn btn123 fw-medium border-dark">View details   -</a>
+                          </div></div>
+                        <div class="col"><div class="card-body mb-3">
+                            <h5 class="card-title mb-2"><Strong>Heading</Strong></h5>
+                            <p class="card-text fw-medium lh-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga quibusdam, adipisci, dolores ducimus exercitationem nostrum atque blanditiis autem illo, veritatis minima aperiam. Deleniti qui distinctio expedita eos praesentium, recusandae fugit?</p>
+                            <a href="#" class="btn btn123 fw-medium border-dark">View details   -</a>
+                          </div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><div class="card-body mb-3">
+                            <h5 class="card-title mb-2"><Strong>Heading</Strong></h5>
+                            <p class="card-text fw-medium lh-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga quibusdam, adipisci, dolores ducimus exercitationem nostrum atque blanditiis autem illo, veritatis minima aperiam. Deleniti qui distinctio expedita eos praesentium, recusandae fugit?</p>
+                            <a href="#" class="btn btn123 fw-medium border-dark">View details   -</a>
+                          </div></div>
+                        <div class="col"><div class="card-body mb-3">
+                            <h5 class="card-title mb-2"><Strong>Heading</Strong></h5>
+                            <p class="card-text fw-medium lh-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga quibusdam, adipisci, dolores ducimus exercitationem nostrum atque blanditiis autem illo, veritatis minima aperiam. Deleniti qui distinctio expedita eos praesentium, recusandae fugit?</p>
+                            <a href="#" class="btn btn123 fw-medium border-dark">View details   -</a>
+                          </div></div>
+                        <div class="col"><div class="card-body mb-3">
+                            <h5 class="card-title mb-2"><Strong>Heading</Strong></h5>
+                            <p class="card-text fw-medium lh-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga quibusdam, adipisci, dolores ducimus exercitationem nostrum atque blanditiis autem illo, veritatis minima aperiam. Deleniti qui distinctio expedita eos praesentium, recusandae fugit?</p>
+                            <a href="#" class="btn btn123 fw-medium border-dark ">View details   -</a>
+                          </div></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+       
+    </div>
+    
+      
+ 
+  </body>
+</html>
