@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en"    >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,29 +8,30 @@
   </body>
     <title>Bootstrap exam1</title>
     <style>
-      .container{
-        position:relative;
-        top: 19vh;
-      }
+        /* .container{
+          position:relative;
+          top: 19vh;
+        } */
 
     </style>
 </head>
-<body class="bg-primary">
-    <div class="container bg-white"  style=" max-width: 600px;">
+<body class=" container bg-primary pt-5 w-100 ">
+    <div class="container bg-white mt-5   w-75    "   >
       <form class="p-4">
         <div class="row">
             <h1 class="col"><strong>Sign Up</strong></h1>
          </div>
           <div class="row">
             <p class="col">Please fill the form to create an account</p>
+            
           </div>
         
             <div class="row">
-              <div class="col">
+              <div class="col-lg-6 col-md-12 col-sm-12">
                 <input type="text" class="form-control mb-3 border-0 bg-light"placeholder="Firstname" name="fname" required>
               </div>
-              <div class="col">
-                <input type="text" class="form-control bg-ligh border-0" placeholder="Lastname" name="lname" required>
+              <div class="col-lg-6 col-md-12 col-sm-12">
+                <input type="text" class="form-control mb-3 bg-light border-0" placeholder="Lastname" name="lname" required>
               </div>
             </div>
             <div class="row">
@@ -48,14 +49,17 @@
                     <input type="password" class="form-control mb-3 bg-light border-0 " placeholder="Confirm Password" name="lname" required>
                 </div>
             </div>
-            <div class="form-check mb-3">
-              <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault">
+            <div class=" col form-check mb-3">
+              <input class="form-check-input  " type="checkbox" value="" id="flexCheckDefault">
               
                 <label class="form-check-label" for="flexCheckDefault">
-                 I acccept the <span class="text-primary">Terms of Use & Privacy policy</span>
+                 I acccept the <a href="#" class="text-primary fw-normal link-underline-opacity-0 link-underline">Terms of Use Privacy Policy</a>
                 </label>
             </div>
-            <button class="btn btn-primary mb-4 px-5">Sign Up</button>       
+            <div class="row">
+
+              <button class=" col col-lg-4 btn btn-primary mb-4 px-4 mx-3 ">Sign Up</button>       
+            </div>
           </form>
         </div>
         <div class="container ">
