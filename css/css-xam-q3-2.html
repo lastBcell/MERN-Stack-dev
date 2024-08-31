@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: monospace;
+        }
+        body{
+            display: flex;
+            /* justify-content:flex-end; */
+            
+            /* border: 3px dashed red; */
+            height: 100vh;
+            width: 100%;
+           
+            margin: 0px;
+        }
+        .container{
+            display: flex;
+            /* border: 2px dashed yellow; */
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            padding: 20px;
+           
+            
+        }
+        h1{
+            color: darkred;
+            font-size: 40px;
+        }
+        label{
+        font-weight: 900;
+        font-size: 20px;
+           
+       }
+        input{
+        width: 100%;
+        height: 40px;
+        margin: 4px;
+        }
+        button{
+        width: 100%;
+        height: 40px;
+        background-color: orangered;
+        color: white;
+        font-size: 20px;
+        border: none;
+        margin:4px ;
+     }
+    button:hover{
+        opacity: 90%;
+    }
+    .remb{
+        display: inline-block;
+        padding: 2px;
+        
+
+    }
+    .remb input{
+        height: 20px;
+        width: 20px;
+    }
+  
+@media only screen and (max-width: 800px) {
+    body{
+        justify-content: center;
+        background:rgb(255, 255, 255) ;
+        
+    }
+    .container{
+        width: 75%;
+    } 
+}
+@media only screen and (min-width: 800px) {
+    body{
+        justify-content: center;
+        background:rgb(255, 255, 255) ;
+        
+    }
+    .container{
+        width: 75%;
+    } 
+
+}
+@media only screen and (min-width: 1282px) {
+    body{
+        justify-content: flex-end;
+        background:linear-gradient(To right, whitesmoke,rgb(132, 105, 243));
+        
+        
+    }
+    .container{
+        width: 50%;
+    } 
+
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+          <form action="#" class="frm">
+                <h1>Login Form</h1>
+                <label for="#email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="pass">Passsword:</label>
+                <input type="password" required>
+                <div class="remb">
+                    <input type="checkbox" >
+                <label for="rem">Remember me</label>
+                </div>
+             <button>Login</button>
+
+            </form>
+    </div>
+</body>
+</html>
