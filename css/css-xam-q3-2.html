@@ -16,7 +16,6 @@
             /* border: 3px dashed red; */
             height: 100vh;
             width: 100%;
-           
             margin: 0px;
         }
         .container{
@@ -58,14 +57,19 @@
     }
     .remb{
         display: inline-block;
-        padding: 2px;
+        /* padding: 2px; */
         
 
     }
     .remb input{
         height: 20px;
         width: 20px;
+        padding: 0px;
+
     }
+  
+   
+   
   
 @media only screen and (max-width: 800px) {
     body{
@@ -91,12 +95,13 @@
 @media only screen and (min-width: 1282px) {
     body{
         justify-content: flex-end;
-        background:linear-gradient(To right, whitesmoke,rgb(132, 105, 243));
+        background:linear-gradient(To top left, #ecdada, #274046);
         
         
     }
     .container{
         width: 50%;
+        
     } 
 
 }
@@ -116,8 +121,8 @@
                 <input type="password" required>
                 <div class="remb">
                     <input type="checkbox" >
-                <label for="rem">Remember me</label>
                 </div>
+                <label class="me" for="rem">Remember me</label>
              <button>Login</button>
 
             </form>
