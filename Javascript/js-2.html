@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <style>
+    body{
+        background-color: rgb(92, 93, 93);
+    }
 
     
     #box{
@@ -28,12 +31,19 @@
       right: 40vw;
       /* text-align: center; */
     }
+    #box3{
+        position: absolute;
+        left: 42vw;
+        bottom: 20px;
+        color: white;
+    }
   </style>
 </style>
 
 <body>
     <div id="box"></div>
     <div id="box2"></div>
+    <div id="box3"></div>
     
 </body>
 <script>
@@ -42,10 +52,12 @@
      
      document.getElementById("box").style.
      display="none"
+     document.getElementById("box3").innerHTML=a
      
     
  }else{
     document.getElementById("box2").style.display="none"
+    document.getElementById("box3").innerHTML=a
    
     
  }

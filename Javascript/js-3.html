@@ -6,7 +6,9 @@
     <title>Document</title>
 </head>
 <style>
-    
+    body{
+        background-color: rgb(91, 93, 93);
+    }
 
     
     #box{
@@ -29,11 +31,17 @@
       right: 38vw;
       /* text-align: center; */
       /* display: none; */
+      visibility: hidden;
     }
     #box3{
         position: absolute;
-        left: 45vw;
-        bottom: 20px;
+        left: 33vw;
+        bottom: 0px;
+        color: white;
+        text-align: center;
+        height: 200px;
+        width: 300px;
+    
     }
     button{
         height: 50px;
@@ -49,7 +57,7 @@
 <body>
     <div id="box"></div>
     <div id="box2"></div>
-    <div id="box3"><button onclick="change()">click here</button>
+    <div id="box3"><p id="dis"></p><button onclick="change()">click here</button>
     </div>
     
 </body>
@@ -64,10 +72,12 @@
     document.getElementById("box").style.
      visibility="hidden";
      document.getElementById("box2").style.visibility="visible"; 
+     document.getElementById("dis").innerHTML=a
  }else{
     document.getElementById("box2").style.visibility="hidden";
     document.getElementById("box").style.
      visibility="visible";
+     document.getElementById("dis").innerHTML=a
    
     
  }
