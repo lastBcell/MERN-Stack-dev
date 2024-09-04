@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+
+    
+    #box{
+        height:210px;
+        width: 210px;
+        /* border: 2px solid black; */
+        margin: auto;
+        margin-top: 40vh;
+        border-radius: 50%;
+        background-color: blanchedalmond;
+    }
+    #box2{
+      height: 0;
+      width: 0;
+      border-bottom: 100px solid blanchedalmond;
+      border-left: 100px solid transparent;
+      border-right: 100px solid transparent;
+      position: absolute;
+      top:45vh;
+      right: 38vw;
+      /* text-align: center; */
+      /* display: none; */
+    }
+    #box3{
+        position: absolute;
+        left: 45vw;
+        bottom: 20px;
+    }
+    button{
+        height: 50px;
+        width: 100px;
+        border-radius: 5px;
+        border: none;
+        font-size: 1em;
+        background-color: rgb(196, 196, 217);
+    }
+  </style>
+</style>
+
+<body>
+    <div id="box"></div>
+    <div id="box2"></div>
+    <div id="box3"><button onclick="change()">click here</button>
+    </div>
+    
+</body>
+<script>
+    
+
+  
+    function change(){
+    a= Math.random()
+ if( a> 0.5){
+     
+    document.getElementById("box").style.
+     visibility="hidden";
+     document.getElementById("box2").style.visibility="visible"; 
+ }else{
+    document.getElementById("box2").style.visibility="hidden";
+    document.getElementById("box").style.
+     visibility="visible";
+   
+    
+ }
+}
+
+</script>
+</html>

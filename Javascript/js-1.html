@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+
+    }
+    /* body{
+        display: flex;
+        margin: 0px;
+        height: 100vh;
+        width: 100%;
+        background-color: azure;
+
+
+    } */
+   
+    
+
+    #box{
+        height: 200px;
+        width: 300px;
+       margin-top: 40vh;
+       color: white;
+       text-align: center;
+       font-size: 1.5rem;
+       margin:auto;
+       margin-top:40vh ;
+       
+       
+    }
+</style>
+
+<body>
+    <!-- <div class="box">a</div>
+    <div class="box">b</div>
+    <div class="box">c</div> -->
+    <div id="box"><h1 id="h"></h1></div>
+    
+</body>
+<script>
+a= Math.random()
+ if( a> 0.5){
+     
+     document.getElementById("box").style.background = "lightblue"
+     document.getElementById("box").innerHTML = a
+
+ }else{
+    document.getElementById("box").style.background = "darkred"
+    document.getElementById("box").innerHTML = a
+
+    
+ }
+    
+    
+    </script>
+</html>
