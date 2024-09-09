@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        margin: 0px;
+        box-sizing: border-box;
+        /* position: relative; */
+        height: 100vh;
+        width:100%;
+        background-color: rgb(92, 93, 93);
+        justify-content: center;
+        align-items: center;
+        
+      
+
+    }
+    table{
+        /* position: absolute; */
+        border-collapse: collapse;
+        height: 300px;
+        width: 400px;
+        text-align: center;
+    }
+    
+    button{
+        height: 100%;
+        width: 100%;
+        border: none;
+        
+    }
+    input{
+        width: 99%;
+        height: 97%;
+        margin: 0px;
+        border: none;
+       
+        
+        
+    }
+    span{
+        color: crimson;
+    }
+</style>
+<body>
+    <div>
+    <table border="1">
+        <tr>
+            <td colspan="4"><input type="text" readonly id="input"></td>
+        </tr>
+        <tr>
+            <td><button onclick="dis('7')"</button>7</td>
+            <td><button onclick="dis('8')">8</button></td>
+            <td><button onclick="dis('9')">9</button>
+            </td>
+            <td><button onclick=" dis('/') ">/</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="dis('7')">4</button></td>
+            <td><button onclick="dis('5')"> 5</button></td>
+            <td><button onclick="dis('3')">3</button></td>
+            <td><button onclick=" dis('x')">x</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="dis('1')">1</button></td>
+            <td><button onclick="dis('2')">2</button></td>
+            <td><button onclick="dis('3')">3</button></td>
+            <td><button onclick=" dis('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="clr()" ><span>C</span></button></td>
+            <td><button onclick="dis('0')">0</button></td>
+            <td><button onclick="bs()">bc</button></td>
+            <td><button onclick="dis('+')">+</button></td>
+        </tr>
+        <tr>
+            <td colspan="4"><button onclick="result()" >=</button></td>
+        </tr>
+    </table>     
+    </div>
+   
+    <script>
+        function dis(a){
+            document.getElementById("input").value +=a
+
+        }
+        function clr(){
+             document.getElementById("input").value = ""
+
+        }
+        function bs(){
+            var x = document.getElementById("input").value
+            var len = x.length
+            var y=x.substring(0,len-1)
+            // console.log(y)
+            document.getElementById("input").value = y
+
+            
+        }
+       function result(){
+            var value= document.getElementById("input").value 
+           var mul =value.indexOf("x")
+           var add =value.indexOf("+")
+           var sub =value.indexOf("-")
+           var div =value.indexOf("/")
+
+           if(mul>0){
+            let val1 =value.substring(0,mul)
+            let val2=value.substring(mul+1,value.length)
+            let result =val1*val2
+            // console.log(val1,val2,result)
+            document.getElementById("input").value = result
+           }
+           else if(add>0){
+             let val1 =value.substring(0,add)
+            let val2=value.substring(add+1,value.length)
+            let result = Number(val1)+Number(val2)
+            // console.log(val1,val2,result)
+            document.getElementById("input").value = result
+           }
+           else if(sub>0){
+             let val1 =value.substring(0,sub)
+            let val2=value.substring(sub+1,value.length)
+            let result = Number(val1)-Number(val2)
+            // console.log(val1,val2,result)
+            document.getElementById("input").value = result
+           }
+           else if(div>0){
+             let val1 =value.substring(0,div)
+            let val2=value.substring(div+1,value.length)
+            let result = val1 / val2
+            // console.log(val1,val2,result)
+            document.getElementById("input").value = result
+
+           }
+
+        //    console.log(mul,add,sub,div)
+        
+       
+            // var val1 =value.substring(0,integ)
+            // var val2=value.substring(integ+1,value.length)
+            // var result =val1*val2
+            // console.log(val1,val2,result)
+            // document.getElementById("input").value = result
+
+       }
+
+            // var value= document.getElementById("input").value 
+           
+        
+    </script>
+    
+</body>
+
+</html>

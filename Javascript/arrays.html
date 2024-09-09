@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        font-family: monospace;
+    }
+    body{
+        margin: 0px;
+    }
+    nav{
+        display: flex;
+        background-color: rgb(96, 100, 100);
+        height: 5vh;
+        align-items: center;
+        justify-content: center;
+        
+
+
+    }
+   
+    a{
+        padding: 10px;
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: white;
+    }
+    .container{
+        padding:20px;
+        background-color: rgb(0, 0, 0);
+        min-height: 95vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        flex-wrap: wrap;
+        flex-shrink: 1;
+
+        
+    }
+    img{
+        height: 300px;
+        width: 300px;
+        scale: 95%;
+        transition: 0.5s;
+    }
+    .item{
+        
+        border: 2px solid rgb(99, 98, 98);
+        border-radius: 10bpx;
+        transition: 0.5s;
+        background-color: rgb(34, 34, 34);
+    }
+    .item:hover{
+        border-color: rgb(217, 213, 213);
+    }
+    .item:hover img{
+        scale: 98%;
+    }
+    h2,p{
+        color: white;
+        text-align: start;
+        padding: 10px;
+    }
+    
+
+   
+
+</style>
+<body>
+    <nav>
+        
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+    </nav>
+    <div class="container" id="cont">
+    </div>
+    
+    <script>
+        const shop=[
+            {
+                name:"Lychee",
+                price:100,
+                src:"https://hips.hearstapps.com/hmg-prod/images/lychee-fruit-sugar-1530136136.jpg?crop=1xw:1xh;center,top&resize=640:*"
+                 
+            },
+            {
+                name:"Grapes",
+                price:101,
+                src:"https://hips.hearstapps.com/hmg-prod/images/grapes-sugar-fruit-1530136398.jpg?crop=1xw:1xh;center,top&resize=480:*"
+            },
+            {
+                name:"Mango",
+                price:102,
+                src:"https://hips.hearstapps.com/hmg-prod/images/mango-fruit-sugar-1530136260.jpg?crop=1xw:1xh;center,top&resize=640:*"
+            },
+            {
+                name:"Cherries",
+                price:103,
+                src:"https://hips.hearstapps.com/hmg-prod/images/cherries-sugar-fruit-1530136329.jpg?crop=1xw:1xh;center,top&resize=640:*"
+            },
+            {
+                name:"Pears",
+                price:104,
+                src:"https://hips.hearstapps.com/hmg-prod/images/pear-1558624506.jpg?crop=1xw:1xh;center,top&resize=640:*"
+            }
+
+        ]
+        // console.log(shop[])
+            shop.forEach(display)
+            
+            function display(value,index,array){
+                document.getElementById("cont").innerHTML +='<div  class="item">'+'<h2>'+ value.name +'</h2>'+'<img src='+value.src+' alt="fruits">'+'<p> MRP:' + value.price +'</p>'+ '</div>'
+    
+        // console.log(value.name,value.price,value.src)
+            }
+
+    </script>
+</body>
+</html>
