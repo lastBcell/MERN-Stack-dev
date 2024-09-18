@@ -12,24 +12,27 @@
 
 <script>
 function myFunction() {
-  var message, x;
-  message = document.getElementById("p01");
-  message.innerHTML = "";
+  // var message, x;
+  // message = document.getElementById("p01");
+  // message.innerHTML = "";
   x = document.getElementById("demo").value;
-  try { 
-    if(x == "")  throw "is empty";
-    if(isNaN(x)) throw "is not a number";
-    x = Number(x);
-    if(x > 20)   throw "is too high";
-    if(x < 3)  throw "is too low";
-  }
-  catch(err) {
-    message.innerHTML = "Input " + err;
-  }
-  finally {
-    document.getElementById("demo").value = "";
-  }
+  // try { 
+  //   if(x == "")  throw "is empty";
+  //   if(isNaN(x)) throw "is not a number";
+  //   x = Number(x);
+  //   if(x > 20)   throw "is too high";
+  //   if(x < 3)  throw "is too low";
+  // }
+  // catch(err) {
+  //   message.innerHTML = "Input " + err;
+  // }
+  // finally {
+  //   document.getElementById("demo").value = "";
+  // }
+ 
+  alert(eval(x))
 }
+
 </script>
 
 </body>
