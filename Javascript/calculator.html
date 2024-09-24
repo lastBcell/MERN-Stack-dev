@@ -46,6 +46,11 @@
     span{
         color: crimson;
     }
+    select{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
 </style>
 <body>
     <div>
@@ -54,29 +59,36 @@
             <td colspan="4"><input type="text" readonly id="input"></td>
         </tr>
         <tr>
-            <td><button onclick="dis('7')"</button>7</td>
+            <td><button onclick="dis('7')">7</button></td>
             <td><button onclick="dis('8')">8</button></td>
             <td><button onclick="dis('9')">9</button>
             </td>
-            <td><button onclick=" dis('/') ">/</button></td>
+            <td><select name="" id="selec" onchange="sel()">
+                <option  value="+">+</option>
+                <option  value="-">-</option>
+                <option  value="/">/</option>
+                <option  value="*">x</option>
+
+
+            </select></td>
         </tr>
         <tr>
             <td><button onclick="dis('7')">4</button></td>
             <td><button onclick="dis('5')"> 5</button></td>
             <td><button onclick="dis('6')">6</button></td>
-            <td><button onclick=" dis('x')">x</button></td>
+            <td><button onclick=" "> </button></td>
         </tr>
         <tr>
             <td><button onclick="dis('1')">1</button></td>
             <td><button onclick="dis('2')">2</button></td>
             <td><button onclick="dis('3')">3</button></td>
-            <td><button onclick=" dis('-')">-</button></td>
+            <td><button onclick=" "></button></td>
         </tr>
         <tr>
             <td><button onclick="clr()" ><span>C</span></button></td>
             <td><button onclick="dis('0')">0</button></td>
             <td><button onclick="bs()">bc</button></td>
-            <td><button onclick="dis('+')">+</button></td>
+            <td><button onclick=""></button></td>
         </tr>
         <tr>
             <td colspan="4"><button onclick="result()" >=</button></td>
@@ -142,7 +154,7 @@
         //    console.log(mul,add,sub,div)
         
        
-            // var val1 =value.substring(0,integ)
+            // var val1 =value.substring(0,integ) 
             // var val2=value.substring(integ+1,value.length)
             // var result =val1*val2
             // console.log(val1,val2,result)
@@ -151,7 +163,10 @@
        }
 
             // var value= document.getElementById("input").value 
-           
+           function sel(){
+            let se=document.getElementById("selec").value
+            document.getElementById("input").value +=se
+           }
         
     </script>
     
