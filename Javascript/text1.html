@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Habbit Tracker Site</h1>
+	<p>This site helps you track your habbits</p>
+	<li id="1">Wake up <button  onclick="fun(this.parentElement.id)">Mark as complete</button></li>
+	<ul>
+		
+		<li id="2">Run 10Km <button onclick="fun(this.parentElement.id)">Mark as complete</button></li>
+		<li id="3">Drink 3L water <button onclick="fun(this.parentElement.id)">Mark as complete</button></li>
+		<li id="4">Eat a fruit<button onclick="fun(this.parentElement.id)">Mark as complete</button></li>
+		<li id="5">Sleep at 10am<button onclick="fun(this.parentElement.id)">Mark as complete</button></li>
+	</ul>
+<script>
+ function fun(a){
+//   alert(a)
+console.log(a)
+ document.getElementById(a).style.textDecoration="line-through"
+ }
+
+</script>
+</body>
+</html>

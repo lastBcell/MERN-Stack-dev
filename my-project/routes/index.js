@@ -1,25 +1,55 @@
 var express = require('express');
 var router = express.Router();
+const User = require('../models/userModel');
+const { validationResult } = require('express-validator');
+const {validateEmail,validatePassword} = require('./customValidators')
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { tit: 'ajay ' });
-});
+router.get('/', function(req, res) {
 
-router.get('/login', function(req, res, next) {
-  res.render('login', { title: 'Express' });
-});
-
-router.get('/users', function(req, res, next) {
-  res.send('respond with a resource');
-});
-
-router.post('/createUser', function(req, res) {
-  const email = req.body.email
-  res.render("form-data",{
-  email:email, 
-  allData:req.body
- });
+  res.render("login", { errors: [] });
 
 });
+
+//route for handling form submission with validations
+
+router.post('/createUser', [
+  // Add custom validation that required/imported
+    validateEmail,
+    validatePassword
+  ], function (req, res) {
+    // Access the validation errors from the request object
+    const errors = req.validationErrors || [];
+ 
+    // Validate the request
+    const validationResultErrors = validationResult(req);
+    if (!validationResultErrors.isEmpty()) {
+      // Merge the errors from validation result into the existing errors
+      errors.push(...validationResultErrors.array());
+    }
+ 
+    if (errors.length > 0) {
+      // There are validation errors, render the form with errors
+      res.render('hello-world', { errors, email: req.body.email });
+    } else {
+      const { email, password } = req.body;
+
+
+      // Create a new User object
+      const newUser = new User({
+      email,
+      password,
+      });
+     
+      // Save the User object to the database
+      newUser.save()
+      .then(() => {
+      res.render('form-data',{message:"Data saved to db"});
+      })
+      .catch((error) => {
+      console.error(error);
+      
+      });
+    }
+  });
+ 
 module.exports = router;

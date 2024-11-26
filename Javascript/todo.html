@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="in" type="text" placeholder="task here">
+    <button onclick="add()">submit</button>
+    <p id="dis"></p>
+    <ul id="list">
+        
+    </ul>
+    <p id="count"></p>
+    
+    <script>
+        var count =0
+        function add(){
+            let b= document.getElementById('in').value
+            if (b == "") {
+                alert('null')
+            }else{
+                document.getElementById('list').innerHTML+= `<li id="${count}"> <span>${b}</span> <button onclick="fun(this.parentElement.id)">markdown</button> <button onclick="del(this.parentElement.id)">delete</button></li>`
+                document.getElementById('count').innerHTML=++count
+                // alert('FULL')
+            }
+           
+
+        }
+        function fun(a){
+            console.log(a)
+            // a.span.style.textDecoration="line-through"
+            var v= document.getElementById(a).firstElementChild.style.textDecoration="line-through"
+            // console.log(v)
+        }
+        function del(a){
+            // console.log(a)
+
+             document.getElementById(a).remove()
+           document.getElementById('count').innerHTML=--count
+
+             
+        }
+    </script>
+</body>
+</html>

@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+ <html lang="en">
+ <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-</head>
-<style>
-    h1{
-        background-color: blue;
-        color: blanchedalmond;
-    }
-</style>
-<body>
-    <h1>this is test login</h1>
-    <hr>
-    <b>yayayya ya</b>
-    <h1>Login</h1>
-    <form action="/createUser" method="post">
-        <label>Email</label><br>
-        <input type="email" name="email"><br>
-        <label>Password</label><br>
-        <input type="password" name="password"><br>
-        <input type="submit" value="Submit">
-    </form>
-</body>
-</html>
+    <title>Template</title>
+ </head>
+ <body>
+
+
+       <h1>Login</h1>
+       <form action="/createUser" method="post">
+           <label>Email</label><br>
+           <input type="text" name="email"><br>
+           <label>Password</label><br>
+           <input type="password" name="password"><br>
+           <input type="submit" value="Submit">
+       </form>
+       <!-- for showing the validations -->
+       <% if (errors && errors.length > 0) { %>
+        <ul>
+            <% errors.forEach(function(error) { %>
+                <li><%= error.msg %></li>
+            <% }); %>
+        </ul>
+    <% } %>
+     
+ </body>
+ </html>
