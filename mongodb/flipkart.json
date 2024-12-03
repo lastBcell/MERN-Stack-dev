@@ -1,0 +1,51 @@
+// user details
+{
+    "user_id":1,
+    "name":"abc",
+    "email":"abc@gmail.com",
+    "password":"jhjhb145wjjhb",
+    "pan":"akdjnkn3535",
+    "address0":"abc.po",
+    "pincode":635547,
+    "order":[
+        {
+        "order_id":1,
+        "order_name":"abc",
+        "price":100
+        }
+
+    ],
+    "gift_cards":[
+        {
+            "card_id":1,
+            "card_number":123456
+        }
+    ],
+    "rewards":
+    [
+        {
+            "reward_id":1,
+            "brand":"puma",
+            "discount":15,
+            "date_from":{"$date": 693792000000},
+            "date_end:":{"$date": 693792000000}
+        }
+        
+    ],
+    "user_reviews":[
+        {
+        "review_id":1,
+        "ratings":2,
+        "comment":"good",
+        "img":"/image"
+        }
+    ],
+    "notification":[
+        {
+            "not_id":1,
+            "not_msg":"msg"
+        }
+    ]
+
+}
+
