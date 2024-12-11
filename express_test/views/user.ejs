@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer List</title>
+  <style>
+    /* General Page Styling */
+    body {
+      font-family: Arial, sans-serif;
+      background: url('/images/dark.png') no-repeat center center fixed; 
+      background-size: cover;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: #ffdf00;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    /* Table Styling */
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+      font-size: 1rem;
+    }
+
+    th {
+      background-color: #8b0000; /* Deep Christmas red */
+      color: white;
+      font-weight: bold;
+    }
+
+    td {
+      background-color: #fdf5e6; /* Eggshell white */
+    }
+
+    tr:nth-child(even) td {
+      background-color: #faebd7; /* Antique white for alternate rows */
+    }
+
+    /* Snow Animation */
+    @keyframes snow {
+      0% { transform: translateY(-10px); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      width: 8px;
+      height: 8px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: snow 10s linear infinite;
+      pointer-events: none;
+    }
+
+    /* Larger Snowflakes */
+    .snowflake.large {
+      width: 12px;
+      height: 12px;
+      animation-duration: 15s;
+    }
+
+    /* Random snowflake positioning and timing */
+    .snowflake:nth-child(1) { left: 5%; animation-duration: 8s; animation-delay: 1s; }
+    .snowflake:nth-child(2) { left: 15%; animation-duration: 10s; animation-delay: 3s; }
+    .snowflake:nth-child(3) { left: 25%; animation-duration: 12s; animation-delay: 5s; }
+    .snowflake:nth-child(4) { left: 35%; animation-duration: 9s; animation-delay: 2s; }
+    .snowflake:nth-child(5) { left: 45%; animation-duration: 11s; animation-delay: 4s; }
+    .snowflake:nth-child(6) { left: 55%; animation-duration: 7s; animation-delay: 3s; }
+    .snowflake:nth-child(7) { left: 65%; animation-duration: 10s; animation-delay: 1s; }
+    .snowflake:nth-child(8) { left: 75%; animation-duration: 13s; animation-delay: 6s; }
+    .snowflake:nth-child(9) { left: 85%; animation-duration: 8s; animation-delay: 2s; }
+    .snowflake:nth-child(10) { left: 95%; animation-duration: 14s; animation-delay: 5s; }
+
+    /* Message Styling */
+    p {
+      font-size: 1.5rem;
+      color: #ffdf00;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎄 Customer List 🎄</h1>
+
+  <% if (data.length > 0) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Password</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% data.forEach(customer => { %>
+          <tr>
+            <td><%= customer.email %></td>
+            <td><%= customer.password %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <p>No customers found.</p>
+  <% } %>
+
+  <!-- Snowflakes -->
+  <div class="snowflake"></div>
+  <div class="snowflake"></div>
+  <div class="snowflake"></div>
+  <div class="snowflake"></div>
+  <div class="snowflake"></div>
+  <div class="snowflake large"></div>
+  <div class="snowflake large"></div>
+  <div class="snowflake"></div>
+  <div class="snowflake"></div>
+  <div class="snowflake"></div>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<% title = 'Product List' %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7f6;
+      color: #333;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+      font-size: 36px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+      font-size: 16px;
+    }
+    table th {
+      background-color: #4CAF50;
+      color: white;
+    }
+    table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    table tr:hover {
+      background-color: #f1f1f1;
+    }
+    table td a {
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    table td a:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+    p {
+      text-align: center;
+      color: #666;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Product List</h1>
+
+    <% if (data.length > 0) { %>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Action</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% data.forEach(product => { %>
+            <tr>
+              <td><%= product.name %></td>
+              <td><%= product.description %></td>
+              <td>$<%= product.price.toFixed(2) %></td>
+              <td><a href="/products/update_product/<%= product._id %>">Edit</a></td>
+              <td><a href="/products/delete_product/<%= product._id %>">delete</td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    <% } else { %>
+      <p>No Products found.</p>
+    <% } %>
+  </div>
+</body>
+</html>
