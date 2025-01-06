@@ -56,6 +56,17 @@ router.get('/signup', function(req, res, next) {
   res.render('signup');
 });
 
+
+router.get('/login',(req,res) =>{
+
+  res.render('login');
+});
+
+router.post('/login',(req,res)=>{
+  const {email,password} = req.body;
+  console.log(email,password)
+});
+
 router.post('/signup', (req, res) => {
     const { name,email,password } = req.body;
     console.log(name,email,password)
@@ -70,7 +81,7 @@ router.post('/signup', (req, res) => {
         res.render('signup', { error: validationError.errors});
     } else {
         newuser.save().then(() => {
-                res.redirect('/');
+                res.redirect('/login');
             }).catch((error) => {
                 console.error(error);
                 
