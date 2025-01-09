@@ -5,13 +5,23 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const db = require('./database/db')
 const multer = require('multer');
+//import the express-session
+const session = require('express-session');
+
+// session setup
 
 
+
+var app = express();
 
 var indexRouter = require('./routes/index');
 var apiRouter = require('./routes/api');
 
-var app = express();
+app.use(session({
+  secret: process.env.SESSION_SECRET || 'default-secret-key',
+  resave: false,
+  saveUninitialized: true,
+}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
