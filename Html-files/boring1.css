@@ -1,0 +1,208 @@
+/* Import Pixel Font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+    image-rendering: pixelated; /* Ensures pixelated graphics */
+}
+
+/* Body */
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Upper, Middle, and Bottom Sections */
+.upper, .middle, .bottom {
+    background: #222;
+    border: 4px solid #ffcc00;
+    border-radius: 0;
+    text-align: center;
+    padding: 15px;
+    margin: 10px;
+    color: #ffcc00;
+    text-shadow: 2px 2px 0 #000;
+    box-shadow: 5px 5px 0 #000;
+}
+
+/* Upper & Bottom Sections */
+.upper, .bottom {
+    width: 80%;
+    max-width: 900px;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+/* Middle Section */
+.middle {
+    width: 80%;
+    max-width: 900px;
+    height: 75vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Middle Items */
+.mitems {
+    height: 40%;
+    width: 22%;
+    min-width: 150px;
+    background: #ff5733;
+    border: 4px solid #000;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: #fff;
+    text-shadow: 2px 2px 0 #000;
+    transition: transform 0.1s ease-in-out;
+    box-shadow: 5px 5px 0 #000;
+}
+
+.mitems:hover {
+    transform: translateY(-5px);
+}
+
+.mitems:active {
+    transform: translateY(2px);
+    box-shadow: 2px 2px 0 #000;
+}
+
+/* Pixelated Button */
+.btn {
+    background: #ffcc00;
+    border: 4px solid #000;
+    color: #000;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    /* text-shadow: 2px 2px 0 #000; */
+    box-shadow: 5px 5px 0 #000;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+.btn:hover {
+    background: #ffa500;
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    transform: translateY(2px);
+    box-shadow: 2px 2px 0 #000;
+}
+
+/* Pixelated Input Field */
+.input-box {
+    background: #000;
+    border: 4px solid #ffcc00;
+    color: #ffcc00;
+    font-size: 0.9rem;
+    padding: 10px;
+    width: 200px;
+    text-shadow: 2px 2px 0 #000;
+    box-shadow: 5px 5px 0 #000;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.input-box::placeholder {
+    color: #ffcc00;
+}
+
+/* Health/Mana Bar */
+.health-bar {
+    width: 200px;
+    height: 20px;
+    background: #440000;
+    border: 4px solid #ff0000;
+    position: relative;
+    box-shadow: 5px 5px 0 #000;
+}
+
+.health-bar span {
+    display: block;
+    height: 100%;
+    width: 70%;
+    background: #ff0000;
+}
+
+/* Score Display */
+.score-box {
+    background: #222;
+    color: #ffcc00;
+    font-size: 1rem;
+    padding: 10px;
+    border: 4px solid #ffcc00;
+    text-shadow: 2px 2px 0 #000;
+    box-shadow: 5px 5px 0 #000;
+    width: 150px;
+    text-align: center;
+}
+
+/* Retro Message Box / Dialogue Box */
+.dialogue-box {
+    background: #222;
+    border: 4px solid #ffcc00;
+    color: #ffcc00;
+    padding: 15px;
+    width: 300px;
+    text-shadow: 2px 2px 0 #000;
+    box-shadow: 5px 5px 0 #000;
+    font-size: 0.8rem;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+/* Pixelated Checkbox */
+.pixel-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #000;
+    border: 4px solid #ffcc00;
+    box-shadow: 2px 2px 0 #000;
+    cursor: pointer;
+}
+
+.pixel-checkbox:checked {
+    background: #ffcc00;
+}
+
+/* Pixelated Cursor */
+body {
+    cursor: url('https://example.com/pixel-cursor.png'), auto;
+}
+
+/* Pixelated Glitch Effect */
+@keyframes glitch {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-2px, -2px); }
+    80% { transform: translate(2px, 2px); }
+    100% { transform: translate(0, 0); }
+}
+
+.glitch-text {
+    display: inline-block;
+    animation: glitch 0.3s infinite;
+    color: #ffcc00;
+    text-shadow: 2px 2px 0 #000;
+}
