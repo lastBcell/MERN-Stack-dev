@@ -1,0 +1,35 @@
+.App-h1{
+  color:red;
+
+}
+.App-btn{
+  height: 20px;
+  width: 100px;
+  color:white;
+  background-color: black;
+  border: none ;
+  outline: none;
+  border-radius: 5px;
+  margin: 5px;
+  /* padding: 5px; */
+  transition: all 0.3s ease;
+}
+.App-btn:hover{
+  transform: scale(1.05);
+}
+.App-border{
+  border: 2px dotted black;
+  margin: 10px;
+}
+.App-img{
+  width:100px;
+  aspect-ratio: 1/1;
+}
+.App-input{
+  border: 2px solid black;
+  outline: none;
+  width: 200px;
+  height: 25px;
+  margin: 10px;
+
+}
