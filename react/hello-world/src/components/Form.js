@@ -14,7 +14,7 @@ export default function Form({object}){
 
     return <div className="App-border">
           <h1>Simple React Form</h1>
-          <p>name:{object.name}</p>
+          {/* <p>name:{object.name}</p> */}
           <form onSubmit={handleSubmit}>
             <label htmlFor="name">Name:</label>
             <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} required className='App-input'/>
